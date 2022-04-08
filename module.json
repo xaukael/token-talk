@@ -3,7 +3,7 @@
     "title": "Token Talk",
     "description": "Press V to move the speech bubble to the selected token, again to dismiss. Intended as a sort of 'talking stick' for games over voice char",
     "author": "Xaukael",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "scripts": ["module.js"],
@@ -11,7 +11,7 @@
       {"name": "socketlib"}
     ],
     "url": "https://github.com/xaukael/token-talk",
-	"socket": true,
+    "socket": true,
     "manifest": "https://raw.githubusercontent.com/xaukael/token-talk/main/module.json",
     "download": "https://raw.githubusercontent.com/xaukael/token-talk/main/token-talk.zip"
 }
