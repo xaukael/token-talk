@@ -1,5 +1,4 @@
 function tokenTalk(t_id) {
-	console.log('talking', t_id)
 	let t = canvas.tokens.get(t_id);
 	if (!t) return;
 	let size = 80;
