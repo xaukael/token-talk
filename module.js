@@ -5,9 +5,9 @@ function tokenTalk(t_id) {
 	let size = 80;
 	let leftAdjust = 0;
 	let topAdjust = 0
-	if (t.id === $(`.token-bubble`).attr('name')) return $(`.token-bubble`).remove();
-	$(`.token-bubble`).remove();
-	let $bubble = $(`<div class="token-bubble" name="${t.id}" style="position: absolute; top: ${t.y+(t.h/2)-size-topAdjust}px; left: ${t.x+(t.w/2)+(size/4)+leftAdjust}px; display:inline;">
+	if (t.id === $(`.talk-bubble`).attr('name')) return $(`.talk-bubble`).remove();
+	$(`.talk-bubble`).remove();
+	let $bubble = $(`<div class="talk-bubble" name="${t.id}" style="position: absolute; top: ${t.y+(t.h/2)-size-topAdjust}px; left: ${t.x+(t.w/2)+(size/4)+leftAdjust}px; display:inline;">
 	<style>
 	.talk-icon {
 		color: var(--color-text-light-2);
@@ -36,7 +36,7 @@ Hooks.once("socketlib.ready", () => {
 });
 
 Hooks.once('init', () => {
-	game.keybindings.register("token-talk", "showSpeakBubble", {
+	game.keybindings.register("token-talk", "showTalkBubble", {
 		name: "Token Talk",
 		hint: "Create Speach Bubble at Token",
 		editable: [{key: "V"}],
