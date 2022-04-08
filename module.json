@@ -12,6 +12,6 @@
     ],
     "url": "https://github.com/xaukael/token-talk",
 	"socket": true,
-    "manifest": "",
-    "download": ""
+    "manifest": "https://raw.githubusercontent.com/xaukael/token-talk/main/module.json",
+    "download": "https://raw.githubusercontent.com/xaukael/token-talk/main/token-talk.zip"
 }
