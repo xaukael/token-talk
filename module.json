@@ -10,8 +10,8 @@
     "dependencies": [
       {"name": "socketlib"}
     ],
-    "url": "",
-		"socket":true,
+    "url": "https://github.com/xaukael/token-talk",
+	"socket": true,
     "manifest": "",
     "download": ""
 }
