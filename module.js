@@ -40,7 +40,12 @@ Hooks.once('init', () => {
 		hint: "Create Speach Bubble at Token",
 		editable: [{key: "V"}],
 		onDown: () => {},
-		onUp: () => {talksocket.executeForEveryone(tokenTalk, canvas.tokens.controlled[0].id);},      
+		onUp: () => {
+			let t = canvas.tokens.controlled[0]
+			if (canvas.tokens._hover?.isOwner) t = canvas.tokens._hover
+			if (!t) return $(`.token-bubble`).remove();
+			talksocket.executeForEveryone(tokenTalk, t.id);
+			},      
 		precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL
 	});
 });
