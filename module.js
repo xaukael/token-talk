@@ -46,6 +46,6 @@ Hooks.once('init', () => {
 			if (!t) return $(`.token-bubble`).remove();
 			talksocket.executeForEveryone(tokenTalk, t.id);
 			},      
-		precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL
+		precedence: CONST.KEYBINDING_PRECEDENCE.PRIORITY
 	});
 });

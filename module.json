@@ -11,7 +11,7 @@
       {"name": "socketlib"}
     ],
     "url": "https://github.com/xaukael/token-talk",
-    "socket": true,
+	"socket": true,
     "manifest": "https://raw.githubusercontent.com/xaukael/token-talk/main/module.json",
     "download": "https://raw.githubusercontent.com/xaukael/token-talk/main/token-talk.zip"
 }
