@@ -19,8 +19,8 @@ function tokenTalk(t_id) {
 	</style>
 	<span class="talk-icon"><i class="fas fa-comment"></i></span>
 	</div>`);
-	if (!game.user.isGM) 
-		canvas.animatePan({x: t.data.x, y: t.data.y});
+	//if (!game.user.isGM) 
+		//canvas.animatePan({x: t.data.x, y: t.data.y});
 	$bubble.click(async function(){
 		$(this).remove();
 	});
@@ -38,13 +38,13 @@ Hooks.once('init', () => {
 	game.keybindings.register("token-talk", "showTalkBubble", {
 		name: "Token Talk",
 		hint: "Create Speach Bubble at Token",
-		editable: [{key: "V"}],
+		editable: [{key: "KeyV"}],
 		onDown: () => {},
 		onUp: () => {
-			let t = canvas.tokens.controlled[0]
-			if (canvas.tokens._hover?.isOwner) t = canvas.tokens._hover
-			if (!t) return $(`.token-bubble`).remove();
-			talksocket.executeForEveryone(tokenTalk, t.id);
+				let t = canvas.tokens.controlled[0];
+				if (canvas.tokens._hover?.isOwner) t = canvas.tokens._hover;
+				if (!t) return $(`.token-bubble`).remove();
+				talksocket.executeForEveryone(tokenTalk, t.id);
 			},      
 		precedence: CONST.KEYBINDING_PRECEDENCE.PRIORITY
 	});

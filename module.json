@@ -1,9 +1,9 @@
 {
     "name": "token-talk",
     "title": "Token Talk",
-    "description": "Press V to move the speech bubble to the selected token, again to dismiss. Intended as a sort of 'talking stick' for games over voice char",
+    "description": "Press B to move the speech bubble to the selected token, again to dismiss. Intended as a sort of 'talking stick' for games over voice char",
     "author": "Xaukael",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "scripts": ["module.js"],
