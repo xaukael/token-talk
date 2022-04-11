@@ -38,7 +38,7 @@ Hooks.once('init', () => {
 	game.keybindings.register("token-talk", "showTalkBubble", {
 		name: "Token Talk",
 		hint: "Create Speach Bubble at Token",
-		editable: [{key: "KeyV"}],
+		editable: [{key: "KeyB"}],
 		onDown: () => {},
 		onUp: () => {
 				let t = canvas.tokens.controlled[0];
