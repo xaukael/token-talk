@@ -1,7 +1,7 @@
 function tokenTalk(t_id) {
 	let t = canvas.tokens.get(t_id);
 	if (!t) return;
-	let size = 80;
+	let size = canvas.grid.size;
 	let leftAdjust = 0;
 	let topAdjust = 0
 	if (t.id === $(`.talk-bubble`).attr('name')) return $(`.talk-bubble`).remove();
@@ -11,7 +11,7 @@ function tokenTalk(t_id) {
 	.talk-icon {
 		color: var(--color-text-light-2);
 		cursor: pointer;
-		pointer-events: all;
+		/*pointer-events: all;*/
 		font-size: ${size}px;
 		text-shadow: 0 0 8px #000000;
 		opacity: .9;
@@ -48,4 +48,8 @@ Hooks.once('init', () => {
 			},      
 		precedence: CONST.KEYBINDING_PRECEDENCE.PRIORITY
 	});
+});
+
+Hooks.on('updateToken', (token)=>{
+  $(`.token-bubble[name="${token.id}"]`).remove();
 });
