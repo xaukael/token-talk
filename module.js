@@ -43,7 +43,7 @@ Hooks.once('init', () => {
 		onUp: () => {
 				let t = canvas.tokens.controlled[0];
 				if (canvas.tokens._hover?.isOwner) t = canvas.tokens._hover;
-				if (!t) return $(`.token-bubble`).remove();
+				if (!t) return $(`.talk-bubble`).remove();
 				talksocket.executeForEveryone(tokenTalk, t.id);
 			},      
 		precedence: CONST.KEYBINDING_PRECEDENCE.PRIORITY
@@ -51,5 +51,5 @@ Hooks.once('init', () => {
 });
 
 Hooks.on('updateToken', (token)=>{
-  $(`.token-bubble[name="${token.id}"]`).remove();
+  $(`.talk-bubble[name="${token.id}"]`).remove();
 });
